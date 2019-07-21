@@ -1,0 +1,59 @@
+*altr_popup.txt*  popup altr files
+
+Version: 0.1.0
+Author: Jagua
+License: MIT License
+
+
+
+==============================================================================
+INTRODUCTION                                         *altr_popup-introduction*
+
+|altr_popup| shows a list of altr files in a popup window.  You can choose
+one from many files and open it.
+
+
+Requirements:
+- Vim (+textprop)
+- |altr|
+  https://github.com/kana/vim-altr
+
+Latest version:
+https://github.com/Jagua/vim-altr_popup
+
+
+
+==============================================================================
+INTERFACE                                               *altr_popup-interface*
+
+------------------------------------------------------------------------------
+MAPPINGS                                                 *altr_popup-mappings*
+
+
+<Plug>(altr_popup)                                        *<Plug>(altr_popup)*
+        Show a list of altr files in a popup window.
+        See |popup_filter_menu| about key mappings in the window.
+
+
+
+==============================================================================
+EXAMPLES                                                 *altr_popup-examples*
+
+        .vimrc
+
+>
+        nmap <Leader>a <Plug>(altr_popup)
+<
+
+
+
+==============================================================================
+CHANGELOG                                               *altr_popup-changelog*
+
+0.1.0   2019-07-21
+        - Initial version.
+
+
+
+==============================================================================
+vim:tw=78:ts=8:sw=2:ft=help:et:norl:fen:fdl=0:

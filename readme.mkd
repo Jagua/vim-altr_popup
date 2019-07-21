@@ -1,0 +1,4 @@
+# vim-altr_popup
+
+**vim-altr_popup** is a Vim plugin to show a list of altr files in a popup window.
+You can choose one from many files and open it.
