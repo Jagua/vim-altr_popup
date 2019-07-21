@@ -2,3 +2,15 @@
 
 **vim-altr_popup** is a Vim plugin to show a list of altr files in a popup window.
 You can choose one from many files and open it.
+
+This plugin depends on:
+
+* [vim-altr](https://github.com/kana/vim-altr)
+
+Latest: https://github.com/Jagua/vim-altr_popup
+
+## .vimrc
+
+```vim
+nmap <Leader>a <Plug>(altr_popup)
+```
