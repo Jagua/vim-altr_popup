@@ -7,6 +7,10 @@ function! altr_popup#run() abort
     throw 'altr_popup: require popup_menu()'
   endif
   let items = s:gather_items()
+  if empty(items)
+    call popup_notification('altr_popup: No files.', {'pos' : 'center'})
+    return
+  endif
   call popup_menu(items, {
         \ 'title' : 'altr',
         \ 'callback' : function('s:callback', [items]),
@@ -15,7 +19,7 @@ endfunction
 
 
 function! s:callback(items, winid, idx) abort
-  if a:idx == -1 || empty(a:items)
+  if a:idx == -1
     return
   endif
   execute 'edit' a:items[a:idx - 1]

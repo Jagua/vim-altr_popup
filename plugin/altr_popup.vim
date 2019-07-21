@@ -8,7 +8,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-nnoremap <silent><expr> <Plug>(altr_popup) altr_popup#run()
+nnoremap <silent> <Plug>(altr_popup) :<C-u>call altr_popup#run()<CR>
 
 
 let &cpo = s:save_cpo

@@ -1,6 +1,6 @@
 *altr_popup.txt*  popup altr files
 
-Version: 0.1.0
+Version: 0.1.1
 Author: Jagua
 License: MIT License
 
@@ -49,6 +49,9 @@ EXAMPLES                                                 *altr_popup-examples*
 
 ==============================================================================
 CHANGELOG                                               *altr_popup-changelog*
+
+0.1.1   2019-07-22
+        - notify in a popup window if there are no altr files.
 
 0.1.0   2019-07-21
         - Initial version.
