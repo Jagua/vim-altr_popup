@@ -2,7 +2,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 
-function! altr_popup#run() abort
+function! altr_popup#run(...) abort
   if !exists('*popup_menu')
     throw 'altr_popup: require popup_menu()'
   endif
@@ -11,18 +11,19 @@ function! altr_popup#run() abort
     call popup_notification('altr_popup: No files.', {'pos' : 'center'})
     return
   endif
+  let ctx = extend({'opener' : {file -> execute('edit `=file`')}}, get(a:, '1', {}))
   call popup_menu(items, {
         \ 'title' : 'altr',
-        \ 'callback' : function('s:callback', [items]),
+        \ 'callback' : function('s:callback', [ctx, items]),
         \})
 endfunction
 
 
-function! s:callback(items, winid, idx) abort
+function! s:callback(ctx, items, winid, idx) abort
   if a:idx == -1
     return
   endif
-  execute 'edit' a:items[a:idx - 1]
+  call a:ctx.opener(a:items[a:idx - 1])
 endfunction
 
 
